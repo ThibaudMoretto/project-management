@@ -1,0 +1,9 @@
+BEGIN;
+
+DROP TABLE IF EXISTS accounts;
+DROP TABLE IF EXISTS account_roles;
+DROP TABLE IF EXISTS locales;
+DROP TABLE IF EXISTS token;
+
+COMMIT;
+

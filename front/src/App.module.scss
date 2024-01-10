@@ -1,0 +1,36 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: none;
+  }
+
+  .content {
+    flex: 1;
+    padding: 40px 50px 20px;
+  }
+
+  .navBar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .dashboard {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+
+    .content {
+      overflow: auto;
+      padding: 0;
+    }
+
+    .header {
+      display: flex;
+    }
+  }
+}

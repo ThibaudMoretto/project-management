@@ -1,0 +1,62 @@
+.login {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    display: flex;
+    max-width: 416px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .noAccount {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+
+      * {
+        font-size: var(--s1);
+        font-weight: 500;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+
+        span {
+          color: var(--blue-2);
+          text-decoration: underline;
+        }
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+}
+
+@media screen and (width <= 768px) {
+  .login {
+    .noAccount {
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}
