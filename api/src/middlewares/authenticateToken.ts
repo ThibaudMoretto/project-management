@@ -19,6 +19,8 @@ export const authenticateToken = (request: Request, response: Response, next: Ne
     const authHeader = request.headers['authorization'];
     const accessToken = authHeader && authHeader.split(' ')[1].replace('"', '').replace('"', '');
 
+    console.log('request.cookies', request.cookies);
+
     const refreshToken = request.cookies['refreshToken'];
 
     if (!refreshToken) return response.status(401).json({ error: 'Unauthorized' });

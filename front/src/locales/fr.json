@@ -1,0 +1,10 @@
+{
+  "dashboard": {
+    "navbar": {
+      "dashboard": "Dashboard",
+      "logout": "Déconnexion",
+      "profile": "Profil",
+      "projects": "Projets"
+    }
+  }
+}

@@ -1,9 +1,56 @@
 .navbar {
   display: flex;
+  width: 240px;
+  height: 100%;
   flex-direction: column;
+  align-items: stretch;
+  padding: 15px;
+  gap: 15px;
 
   .closeButton {
     display: none;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 21px;
+    border-radius: 50px;
+    color: var(--white);
+    gap: 10px;
+    text-transform: none;
+    transition: all 0.1s ease-in-out;
+    white-space: nowrap;
+
+    > span {
+      color: var(--grey-4);
+      font-size: var(--s0);
+      font-weight: 400;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: var(--grey-4);
+      }
+    }
+
+    &:last-child {
+      margin-top: auto;
+    }
+
+    &:hover:not(.isActive) {
+      padding-left: 25px;
+      background-color: rgba(var(--grey-2-value), 0.2);
+      cursor: pointer;
+      transition:
+        padding-left 0.1s ease-in-out,
+        background-color 0.1s ease-in-out;
+    }
+
+    &.isActive {
+      background-color: rgba(var(--grey-3-value), 0.1);
+    }
   }
 }
 
