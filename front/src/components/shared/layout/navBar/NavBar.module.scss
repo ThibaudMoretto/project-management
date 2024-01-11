@@ -7,6 +7,16 @@
   padding: 15px;
   gap: 15px;
 
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: wheat;
+    font-size: var(--s4);
+    text-align: center;
+  }
+
   .closeButton {
     display: none;
   }

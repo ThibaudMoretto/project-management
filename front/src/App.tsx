@@ -1,22 +1,20 @@
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { useGetUserQuery } from 'store/user';
 
 import { PageNotFound } from 'components/404/404';
+import { Dashboard } from 'components/dashboard/Dashboard';
 import { Header } from 'components/header/Header';
 import { Login } from 'components/login/Login';
-import { NavBar } from 'components/navBar/NavBar';
-import { Overview } from 'components/overview/Overview';
+
+import './config/i18n';
 
 import styles from './App.module.scss';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const { data: user } = useGetUserQuery();
 
-  console.log(user);
+  const hasUser = Boolean(user?.role);
 
   return (
     <div className={styles.app}>
@@ -24,16 +22,18 @@ function App() {
         <Header />
       </div>
 
-      <div className={styles.navBar}>
-        <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      </div>
-
       <div className={styles.content}>
         <Routes>
+          {' '}
+          {hasUser && (
+            <>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/:projectId" element={<Dashboard />} />
+            </>
+          )}
+          {/* <Route path="/projects" element={<TasksList />} />
+          <Route path="/profile" element={<Projects />} /> */}
           <Route path="/login" element={<Login />} />
-
-          <Route path="/" element={<Overview />} />
-
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

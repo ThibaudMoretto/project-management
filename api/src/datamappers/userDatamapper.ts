@@ -1,6 +1,6 @@
 import client from '../config/client';
 
-import { User } from 'project-management';
+import { User } from 'project-management-types';
 
 import { camelizeObjectKeys } from '../utils/camelizeObjectKeys';
 

@@ -23,4 +23,11 @@ html {
     color: var(--blue-1);
     text-decoration: none;
   }
+
+  input {
+    padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--s0);
+    letter-spacing: 0.15px;
+  }
 }

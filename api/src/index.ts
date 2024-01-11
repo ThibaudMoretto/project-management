@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 import addTokenToResponse from './middlewares/addTokenToResponse';
 import { authenticateToken } from './middlewares/authenticateToken';
@@ -19,6 +20,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(cookieParser());
 
 // To parse the incoming requests with JSON payloads
 app.use(express.json());

@@ -26,6 +26,8 @@ function NavBar({ isMenuOpen, setIsMenuOpen }: Props) {
 
   return (
     <nav className={cn(styles.navbar, { [styles.isMenuOpen]: isMenuOpen })}>
+      <div className={styles.logo}>Project Management</div>
+
       <CloseOutlined
         className={styles.closeButton}
         onClick={() => setIsMenuOpen(false)}

@@ -2,9 +2,9 @@
   "dashboard": {
     "navbar": {
       "dashboard": "Dashboard",
-      "logout": "Logout",
       "profile": "Profile",
       "projects": "Projects"
     }
-  }
+  },
+  "logout": "Logout"
 }

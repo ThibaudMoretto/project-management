@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { jwtService } from '../services/jwt';
 import userDatamapper from '../datamappers/userDatamapper';
 
-import { User } from 'project-management';
+import { User } from 'project-management-types';
 
 const loginController = {
   async login(

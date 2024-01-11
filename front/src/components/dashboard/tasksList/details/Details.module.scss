@@ -1,0 +1,23 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  color: var(--grey-2);
+
+  .projectSelector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+:global(.createProjectModal) {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+
+  button {
+    align-self: flex-end;
+  }
+}

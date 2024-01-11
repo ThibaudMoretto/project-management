@@ -15,3 +15,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 exports.__esModule = true;
 __exportStar(require("./user"), exports);
+__exportStar(require("./project"), exports);
+__exportStar(require("./task"), exports);

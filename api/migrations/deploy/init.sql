@@ -1,4 +1,4 @@
--- Deploy kelto:init to pg
+-- Deploy project-management:init to pg
 BEGIN;
 
 CREATE TABLE
