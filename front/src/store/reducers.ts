@@ -10,4 +10,5 @@ const rootReducer = combineReducers({
   [userApi.reducerPath]: userApi.reducer,
 });
 
+export type RootState = ReturnType<typeof rootReducer>;
 export default rootReducer;

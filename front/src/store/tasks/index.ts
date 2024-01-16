@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { CreateTaskData, Task } from 'project-management';
+import { CreateTaskData, Task } from 'project-management-types';
 
 import { baseQuery } from '../baseQuery';
 

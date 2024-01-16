@@ -1,5 +1,6 @@
 import { memo, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
 import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
@@ -15,6 +16,8 @@ import {
 import styles from './TasksList.module.scss';
 
 function TasksList() {
+  const { t } = useTranslation();
+
   const { projectId } = useParams();
 
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -108,7 +111,7 @@ function TasksList() {
         >
           {statuses.map(status => (
             <div className={styles.column}>
-              <h2>{status.name}</h2>
+              <h3>{t(`dashboard.columns.${status.name}`)}</h3>
               <Droppable droppableId={status.id}>
                 {provided => (
                   <div

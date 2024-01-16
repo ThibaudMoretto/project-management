@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { Project } from 'project-management';
+import { Project } from 'project-management-types';
 
 import { baseQuery } from '../baseQuery';
 

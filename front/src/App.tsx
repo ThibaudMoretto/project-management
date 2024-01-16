@@ -6,6 +6,8 @@ import { PageNotFound } from 'components/404/404';
 import { Dashboard } from 'components/dashboard/Dashboard';
 import { Header } from 'components/header/Header';
 import { Login } from 'components/login/Login';
+import { Profile } from 'components/profile/Profile';
+import { Projects } from 'components/projects/Projects';
 
 import './config/i18n';
 
@@ -31,8 +33,8 @@ function App() {
               <Route path="/:projectId" element={<Dashboard />} />
             </>
           )}
-          {/* <Route path="/projects" element={<TasksList />} />
-          <Route path="/profile" element={<Projects />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

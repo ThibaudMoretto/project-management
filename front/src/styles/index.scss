@@ -30,4 +30,22 @@ html {
     font-size: var(--s0);
     letter-spacing: 0.15px;
   }
+
+  h1 {
+    font-size: var(--s4);
+    font-weight: 600;
+    letter-spacing: 0.15px;
+  }
+
+  h2 {
+    font-size: var(--s3);
+    font-weight: 600;
+    letter-spacing: 0.15px;
+  }
+
+  h3 {
+    font-size: var(--s2);
+    font-weight: 600;
+    letter-spacing: 0.15px;
+  }
 }

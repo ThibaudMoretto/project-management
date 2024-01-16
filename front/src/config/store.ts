@@ -19,7 +19,11 @@ const configStore = () => {
 
   return configureStore({
     reducer,
+    // @ts-expect-error no need to type this
     middleware: gDM => gDM().concat(...middlewares),
   });
 };
+
+export type AppStore = ReturnType<typeof configStore>;
+export type AppDispatch = AppStore['dispatch'];
 export default configStore;

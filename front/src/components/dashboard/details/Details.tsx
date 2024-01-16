@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -14,9 +14,9 @@ import { projectSchema } from './projectSchema';
 
 import styles from './Details.module.scss';
 
-export function Details() {
+function Details() {
   const { projectId } = useParams();
-  const { data: projects, isLoading } = useGetProjectsQuery();
+  const { data: projects = [], isLoading } = useGetProjectsQuery();
 
   const navigate = useNavigate();
 
@@ -65,11 +65,13 @@ export function Details() {
       {contextHolder}
       <div className={styles.projectSelector}>
         <label htmlFor="title">Select project</label>
+        {projects.find(project => project.id === Number(projectId))?.id}
         <Select
           placeholder="Select a project"
           onChange={value => navigate(`/${value}`)}
           defaultValue={
-            projects?.find(project => project.id === Number(projectId))?.id
+            projects.find(project => project.id === Number(projectId))?.id ||
+            projects[0]
           }
         >
           {projects?.map(project => (
@@ -102,3 +104,7 @@ export function Details() {
     </div>
   );
 }
+
+const MemoizedDetails = memo(Details);
+
+export { MemoizedDetails as Details };

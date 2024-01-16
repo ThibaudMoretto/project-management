@@ -6,7 +6,7 @@ import { useGetProjectsQuery } from 'store/projects';
 import { Layout } from 'components/shared/layout/Layout';
 
 import { TasksList } from './tasksList/TasksList';
-import { Details } from './tasksList/details/Details';
+import { Details } from './details/Details';
 
 import styles from './Dashboard.module.scss';
 

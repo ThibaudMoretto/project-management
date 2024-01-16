@@ -55,9 +55,9 @@ function NavBar({ isMenuOpen, setIsMenuOpen }: Props) {
       </NavLink>
 
       <NavLink
-        to={'profile'}
+        to={'/profile'}
         className={cn(styles.item, {
-          [styles.isActive]: pathname.includes('profile'),
+          [styles.isActive]: pathname.includes('/profile'),
         })}
         onClick={() => setIsMenuOpen(false)}
       >

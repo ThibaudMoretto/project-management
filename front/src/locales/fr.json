@@ -1,5 +1,11 @@
 {
   "dashboard": {
+    "columns": {
+      "toDo": "A faire",
+      "inProgress": "En cours",
+      "done": "Terminé",
+      "backlog": "Backlog"
+    },
     "navbar": {
       "dashboard": "Dashboard",
       "profile": "Profil",
